@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: darkslateblue;
+}
+
+.container {
+  width: 450px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 20px 40px;
+}
+
+.container .captcha-area {
+  display: flex;
+  height: 65px;
+  margin: 20px 0;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.captcha-img {
+  height: 100%;
+  width: 300px;
+  position: relative;
+}
+
+.captcha-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(90%);
+  border-radius: 5px;
+}
+
+.captcha-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 10px;
+  font-size: 2rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 0 2px darkgray;
+}
+
+.reload {
+  border: none;
+  outline: none;
+  background-color: blueviolet;
+  color: white;
+  width: 65px;
+  height: 100%;
+  border-radius: 5px;
+  font-size: 1.7rem;
+  font-weight: 200;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reload:hover {
+  background-color: rgb(120, 37, 197);
+}
+
+.reload i {
+  transform: translateY(3%);
+  transition: transform 0.3s ease;
+}
+
+.reload:hover i {
+  transform: rotate(30deg);
+}
+
+.input-area {
+  width: 100%;
+  height: 45px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-area input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 1px solid rgb(174, 122, 222);
+  padding-left: 1rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  border-radius: 5px;
+}
+
+.input-area input:focus:valid {
+  border: 2px solid blueviolet;
+}
+
+.input-area input::placeholder {
+  color: #bfbfbf;
+  padding-left: 2px;
+}
+
+.input-area button {
+  position: absolute;
+  right: 4px;
+  border: none;
+  cursor: pointer;
+  height: 80%;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 0; /* obutton's text vertical align */
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-area input:valid + button {
+  opacity: 1;
+  pointer-events: auto;
+}
