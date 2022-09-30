@@ -133,3 +133,13 @@ body {
   opacity: 1;
   pointer-events: auto;
 }
+
+.status-text {
+  /* display: none; */
+  font-size: 1rem;
+  text-align: center;
+  margin: 15px 0 -5px;
+  color: tomato;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
