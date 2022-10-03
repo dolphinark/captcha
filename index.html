@@ -16,16 +16,18 @@
         <div class="captcha-area">
             <div class="captcha-img">
                 <img src="./captcha-bg.png" alt="captcha">
-                <div class="captcha-txt">D65dsf</div>
+                <div id="captcha-txt"></div>
             </div>
-            <button class="reload"><i class="fa fa-solid fa-rotate-right"></i></button>
+            <button class="reload" onclick="getCaptcha()"><i class="fa fa-solid fa-rotate-right"></i></button>
         </div>
         <form action="#" class="input-area">
-            <input type="text" placeholder="Enter CHAPTCHA" required>
-            <button>Check</button>
+            <input id="user-input" type="text" placeholder="Enter CAPTCHA" required>
+            <button id="check-btn">Check</button>
         </form>
-        <div class="status-text">CAPTCHA not matched. Please try again!</div>
+        <div class="status-text">
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

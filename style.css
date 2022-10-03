@@ -43,7 +43,7 @@ body {
   border-radius: 5px;
 }
 
-.captcha-txt {
+#captcha-txt {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -135,11 +135,11 @@ body {
 }
 
 .status-text {
-  /* display: none; */
   font-size: 1rem;
   text-align: center;
   margin: 15px 0 -5px;
   color: tomato;
   font-weight: 600;
   letter-spacing: 0.4px;
+  display: none;
 }
